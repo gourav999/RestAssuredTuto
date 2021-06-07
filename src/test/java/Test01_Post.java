@@ -16,6 +16,8 @@ import static org.hamcrest.Matchers.*;
 import java.util.HashMap;
 import java.util.Map;
 
+//Note: we are running the test for reqres.in. Endpoints are present on this site.
+
 //note: we can import this thing to if we want this line //Response response = RestAssured.get("https://reqres.in/api/users?page=2");
 //import io.restassured.RestAssured.*;
 public class Test01_Post {
