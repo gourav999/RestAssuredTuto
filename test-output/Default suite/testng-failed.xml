@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test01_Post">
+      <class name="Test04_Parameterization_dataDriven">
         <methods>
-          <include name="verifyDelete"/>
+          <include name="testDelete" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- Test01_Post -->
+      </class> <!-- Test04_Parameterization_dataDriven -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

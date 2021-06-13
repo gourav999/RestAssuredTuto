@@ -1,3 +1,5 @@
+
+//Second video
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
@@ -46,7 +48,7 @@ public class Test01_Post {
 
 		// This is for post request
 		given().header("Content-type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body(req.toJSONString()).post(POST_URL).then().statusCode(201);
+		.body(req.toJSONString()).post(POST_URL).then().statusCode(201);
 	}
 
 	@Test
@@ -71,7 +73,7 @@ public class Test01_Post {
 
 		// This is for hitting the PUT request
 		given().header("Content-type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body(req.toJSONString()).put(PUT_URL_PatchURL).then().statusCode(200).log().all();
+		.body(req.toJSONString()).put(PUT_URL_PatchURL).then().statusCode(200).log().all();
 
 		// This is for fetching the response
 		ResponseBody b = given().when().get("https://reqres.in/api/users/2").getBody();
@@ -101,7 +103,7 @@ public class Test01_Post {
 
 		// This is for hitting the PUT request
 		given().header("Content-type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body(req.toJSONString()).patch(PUT_URL_PatchURL).then().statusCode(200).log().all();
+		.body(req.toJSONString()).patch(PUT_URL_PatchURL).then().statusCode(200).log().all();
 
 		// This is for fetching the response
 		ResponseBody b = given().when().get("https://reqres.in/api/users/2").getBody();
