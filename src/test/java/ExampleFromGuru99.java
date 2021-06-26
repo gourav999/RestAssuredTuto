@@ -19,7 +19,7 @@ import io.restassured.RestAssured;
 //get('http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1'). ->only the url needs to be supplied
 //then(). -> No specific assertions required
 //log(). all() -> Once all the response is fetched, log response, headers, essentially everything that the request returns to you.
-
+//Gourav
 public class ExampleFromGuru99 {
 	String URL = "https://reqres.in/api/users?page=2";
 
