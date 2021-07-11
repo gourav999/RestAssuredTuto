@@ -43,9 +43,9 @@ public class Test04_Parameterization_dataDriven extends DataForTest {
 		}
 	}
 
-	// First of all this code is commented not becuase its wrogin, its bcause of
+	// First of all this code is commented not because its wrong, its because of
 	// learning.
-	// Return two dimational object (rwo and array) we have careted one excel
+	// Return two dimentional object (row and array) we have created one excel
 	// undertest-data for example.
 	// we are creating here static.
 	@DataProvider(name ="dataFromDataProviderBaba")
