@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utility.ExcelUtils">
+      <class name="VerificationofJson">
         <methods>
-          <include name="getRowCount"/>
+          <include name="test_NumberOfCircuits_ShouldBe20_UsingResponseSpec"/>
         </methods>
-      </class> <!-- utility.ExcelUtils -->
+      </class> <!-- VerificationofJson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
