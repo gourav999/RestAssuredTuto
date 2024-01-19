@@ -27,8 +27,8 @@ public class Test01_Get {
 		System.out.println(response.getSessionId());
 		System.out.println(response.getStatusCode());// Printing 200
 		System.out.println(response.getStatusLine());// Printing HTTP/1.1 200 OK
-		System.out.println("Reponse time is" + response.getTime());// Printing the milisecond of response
-		System.out.println(response.getBody().asPrettyString());// print the body of response as string.
+		System.out.println("Response time is" + response.getTime());// Printing the milisecond of response
+		//System.out.println(response.getBody().asPrettyString());// print the body of response as string.
 		System.out.println(response.getClass());
 		System.out.println("This is the cookie" + response.getCookies());
 		System.out.println("This is the detailed Cookie" + response.getDetailedCookies());

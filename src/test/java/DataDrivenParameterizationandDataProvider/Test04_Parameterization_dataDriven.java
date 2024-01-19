@@ -46,7 +46,7 @@ public class Test04_Parameterization_dataDriven extends DataForTest {
 	// First of all this code is commented not because its wrong, its because of
 	// learning.
 	// Return two dimentional object (row and array) we have created one excel
-	// undertest-data for example.
+	// under test-data for example.
 	// we are creating here static.
 	@DataProvider(name ="dataFromDataProviderBaba")
 	public Object[][] dataForPost() {
@@ -125,7 +125,7 @@ public class Test04_Parameterization_dataDriven extends DataForTest {
 
 	@DataProvider(name = "deletingID")
 	public Object[] dataFordelete() {
-		return new Object[] { 11, 12, 13, 14 };
+		return new Object[] { 18, 19, 20, 21 };
 	}
 
 	@Test(dataProvider = "deletingID")
@@ -141,7 +141,7 @@ public class Test04_Parameterization_dataDriven extends DataForTest {
 	//Parmeterization-this suerID is defined in testng.xml
 	@Parameters({ "userID" })
 	@Test
-	public void testDelete2(int userID) {
+	public void testDelete2(String userID) {
 		System.out.println("User id is from testng.xml file -->" + userID);
 		baseURI = "http://localhost:3000";
 

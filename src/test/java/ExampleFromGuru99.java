@@ -1,4 +1,6 @@
 
+
+import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
@@ -25,7 +27,7 @@ public class ExampleFromGuru99 {
 
 	@Test
 	public void getResponseBody() throws InterruptedException {
-		// pring the respoinse in console
+		// print the reponse in console
 		System.out.println("Printing the entire response");
 		given().when()
 				.get("http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1")

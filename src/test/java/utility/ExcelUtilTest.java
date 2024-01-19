@@ -28,7 +28,6 @@ public class ExcelUtilTest {
 			excel.getCellData(1, 2);
 			excel.getCellDataFrom_XLS_FileExtension(1,0);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
