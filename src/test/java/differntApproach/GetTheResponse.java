@@ -5,6 +5,7 @@ package differntApproach;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
@@ -52,11 +53,39 @@ public class GetTheResponse {
         System.out.println("First circuit: " + firstCircuit_name);
 
         String allCircutis = response.jsonPath().getString("MRData.CircuitTable.Circuits");
-        System.out.println("First circuit: " + allCircutis);
+        System.out.println("all circuits: " + allCircutis);
 
         // second number wala cicuit ke andar ka poora print karna.
         String secondCompleteCircutKeAndar = response.jsonPath().getString("MRData.CircuitTable.Circuits[2]");
         System.out.println("second complete circuit: " + secondCompleteCircutKeAndar);
+
+    }
+
+
+    @Test
+    public void anotherExampleFromChatGPT(){
+        RestAssured.baseURI = "https://reqres.in";
+        String URL = "https://reqres.in/api/users?page=2";
+        Response response=RestAssured.given().queryParam("page",2)
+                .when().get("api/users").then().statusCode(200).extract().response();
+        //System.out.println("Reponnse fromchat gpt code--->"+response.asString());
+        //System.out.println("Reponnse fromchat gpt code--->"+response.asPrettyString());
+        //System.out.println("Status code gpt code--->"+response.getStatusCode());
+
+        //This is important
+        JsonPath js=response.jsonPath();
+        String supportURL=js.getString("support.url");
+        String supportText = js.getString("support.text");
+        int totalUsers = js.getList("data").size();
+
+        Assert.assertEquals(supportURL, "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral", "Support URL did not match");
+        Assert.assertTrue(supportText.contains("Tired"), "Support text did not mention 'contributions'");
+        Assert.assertTrue(totalUsers > 0, "User list is empty");
+
+
+
+
+
 
     }
 }
